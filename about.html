@@ -26,51 +26,33 @@
     </header>
 
     <main>
-      <section class="about-details">
-        <article class="bio">
-          <h2>My Journey</h2>
+      <section class="about-details section-padding">
+        <article class="bio card fade-in">
+          <h2 class="section-heading">My Professional Journey</h2>
           <p>
-            Currently pursuing my B.E in Computer Science at Babasaheb Naik
-            College of Engineering with a passion for building web solutions. My
-            internship at Zidio Development helped me gain practical experience
-            in full-stack development.
+            Passionate full-stack developer with expertise in Java, React, and
+            modern web technologies. Currently pursuing my B.E in Computer
+            Science while working on freelance projects and internships.
           </p>
         </article>
 
-        <div class="details-grid">
-          <div class="education">
-            <h3><i class="fas fa-graduation-cap"></i> Education</h3>
-            <ul>
-              <li><strong>B.E Computer Science</strong> - BNCOE (2021-2025)</li>
-              <li><strong>HSC</strong> - Atahar Mirza High School (79%)</li>
-              <li><strong>SSC</strong> - Atahar Mirza High School (69%)</li>
-            </ul>
-          </div>
-
-          <div class="experience">
-            <h3><i class="fas fa-briefcase"></i> Experience</h3>
-            <ul>
-              <li>
-                <strong>Intern</strong> - Zidio Development (2023-Present)
-              </li>
-              <li><strong>Freelance Projects</strong> - Website Development</li>
-            </ul>
+        <!-- Dynamic Timeline Section -->
+        <div class="timeline-container card fade-in">
+          <h3 class="section-heading">
+            <i class="fas fa-history"></i> My Timeline
+          </h3>
+          <div class="timeline" id="experience-timeline">
+            <!-- Timeline loaded dynamically -->
           </div>
         </div>
 
-        <div class="certifications">
-          <h3><i class="fas fa-certificate"></i> Certifications</h3>
-          <div class="certs-grid">
-            <div class="cert-item">
-              <h4>Java Full Stack</h4>
-              <p>Great Learning Academy</p>
-              <a href="#" class="view-cert">View Certificate</a>
-            </div>
-            <div class="cert-item">
-              <h4>Java & C++</h4>
-              <p>Udemy Certification</p>
-              <a href="#" class="view-cert">View Certificate</a>
-            </div>
+        <!-- Skills Progress Bars -->
+        <div class="skills-progress card fade-in">
+          <h3 class="section-heading">
+            <i class="fas fa-chart-line"></i> Technical Proficiency
+          </h3>
+          <div id="skills-bars-container">
+            <!-- Progress bars loaded dynamically -->
           </div>
         </div>
 
@@ -88,5 +70,7 @@
     <footer>
       <p>Connect with me: rohitranveer358@gmail.com | +91 9158000676</p>
     </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>

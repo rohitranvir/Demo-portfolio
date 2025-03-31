@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rohit Ranvir | Java Full Stack Developer</title>
+    <title>Rohit Ranvir | Full Stack Developer</title>
     <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
@@ -15,11 +15,11 @@
       <div class="header-content">
         <img src="images/my.jpg" alt="Rohit Ranvir" class="profile-img" />
         <h1>Rohit Ranvir</h1>
-        <p class="tagline">Java Full Stack Developer</p>
+        <p class="tagline">Full Stack Developer | Problem Solver</p>
         <div class="social-links">
-          <a href="#"><i class="fab fa-github"></i></a>
-          <a href="#"><i class="fab fa-linkedin"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#" id="github-link"><i class="fab fa-github"></i></a>
+          <a href="#" id="linkedin-link"><i class="fab fa-linkedin"></i></a>
+          <a href="#" id="twitter-link"><i class="fab fa-twitter"></i></a>
         </div>
         <nav>
           <a href="index.html" class="active"
@@ -32,49 +32,72 @@
     </header>
 
     <main>
+      <!-- Hero Section -->
       <section class="hero">
         <div class="hero-content">
-          <h2>Building Digital Solutions That Matter</h2>
-          <p>
-            I create responsive, user-friendly web applications using modern
+          <h2 id="typing-text"></h2>
+          <p class="hero-description">
+            I build responsive, performant web applications with modern
             technologies
           </p>
           <div class="cta-buttons">
-            <a href="about.html" class="cta-button"
-              >View My Work <i class="fas fa-arrow-right"></i
-            ></a>
-            <a href="contact.html" class="cta-button secondary"
-              >Hire Me <i class="fas fa-paper-plane"></i
-            ></a>
+            <a href="#projects" class="cta-button">View Projects</a>
+            <a href="contact.html" class="cta-button secondary">Hire Me</a>
           </div>
         </div>
       </section>
 
-      <section class="skills">
-        <h3>Core Competencies</h3>
-        <div class="skills-grid">
-          <div class="skill-item">
-            <i class="fab fa-java"></i>
-            <p>Java</p>
+      <!-- Skills Section -->
+      <section class="skills section-padding">
+        <h3 class="section-heading">Technical Skills</h3>
+        <div class="skills-grid" id="skills-container">
+          <!-- Skills loaded dynamically -->
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section class="projects section-padding" id="projects">
+        <h3 class="section-heading">Featured Projects</h3>
+        <div class="projects-grid" id="projects-container">
+          <!-- Projects loaded dynamically -->
+        </div>
+      </section>
+
+      <!-- Statistics Section -->
+      <section class="stats section-padding">
+        <div class="stats-grid">
+          <div class="stat-item">
+            <span class="stat-number" id="projects-completed">0</span>
+            <span class="stat-label">Projects Completed</span>
           </div>
-          <div class="skill-item">
-            <i class="fab fa-react"></i>
-            <p>React</p>
+          <div class="stat-item">
+            <span class="stat-number" id="happy-clients">0</span>
+            <span class="stat-label">Happy Clients</span>
           </div>
-          <div class="skill-item">
-            <i class="fas fa-database"></i>
-            <p>MySQL</p>
+          <div class="stat-item">
+            <span class="stat-number" id="coding-hours">0</span>
+            <span class="stat-label">Coding Hours</span>
           </div>
-          <div class="skill-item">
-            <i class="fab fa-js"></i>
-            <p>JavaScript</p>
-          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials Section -->
+      <section class="testimonials section-padding">
+        <h3 class="section-heading">Client Testimonials</h3>
+        <div class="testimonial-slider" id="testimonial-slider">
+          <!-- Testimonials loaded dynamically -->
         </div>
       </section>
     </main>
 
     <footer>
-      <p>© 2023 Rohit Ranvir. All rights reserved.</p>
+      <div class="footer-content">
+        <p>
+          © <span id="current-year"></span> Rohit Ranvir. All rights reserved.
+        </p>
+      </div>
     </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>
