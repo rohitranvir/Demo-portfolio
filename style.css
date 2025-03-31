@@ -1,0 +1,84 @@
+/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #040b14;
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid #2c2f3f;
+    object-fit: cover;
+}
+
+nav {
+    margin-top: 1rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav a:hover, nav a.active {
+    color: #00a78e;
+}
+
+main {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 20px;
+}
+
+/* Button Styles */
+.cta-button {
+    background-color: #00a78e;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.cta-button:hover {
+    background-color: #008c7a;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Section Styles */
+.intro, .about-section {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.about-section p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.about-section strong {
+    color: #00a78e;
+    font-weight: 600;
+}
