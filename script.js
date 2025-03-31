@@ -1,9 +1,9 @@
 // Portfolio Data
 const portfolioData = {
   socialLinks: {
-    github: "https://github.com/yourusername",
-    linkedin: "https://linkedin.com/in/yourprofile",
-    twitter: "https://twitter.com/yourhandle",
+    github: "https://github.com/rohitranvir",
+    linkedin: "www.linkedin.com/in/rohit-ranveer",
+    twitter: "https://www.facebook.com/share/16CB8f1FF4/",
   },
   skills: [
     { name: "Java", icon: "fab fa-java", level: 90 },
