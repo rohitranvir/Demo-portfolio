@@ -3,26 +3,78 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Your Name - Home</title>
+    <title>Rohit Ranvir | Java Full Stack Developer</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
   </head>
   <body>
     <header>
-      <img src="images/my.jpg" alt="Your Name" class="profile-img" />
-      <h1>Your Name</h1>
-      <nav>
-        <a href="index.html" class="active">Home</a>
-        <a href="about.html">About</a>
-      </nav>
+      <div class="header-content">
+        <img src="images/my.jpg" alt="Rohit Ranvir" class="profile-img" />
+        <h1>Rohit Ranvir</h1>
+        <p class="tagline">Java Full Stack Developer</p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-github"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+        <nav>
+          <a href="index.html" class="active"
+            ><i class="fas fa-home"></i> Home</a
+          >
+          <a href="about.html"><i class="fas fa-user"></i> About</a>
+          <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+        </nav>
+      </div>
     </header>
+
     <main>
-      <section class="intro">
-        <h2>Welcome to My Portfolio!</h2>
-        <p>I'm a passionate developer specializing in [your skills].</p>
-        <button onclick="window.location.href='about.html'" class="cta-button">
-          Learn More About Me
-        </button>
+      <section class="hero">
+        <div class="hero-content">
+          <h2>Building Digital Solutions That Matter</h2>
+          <p>
+            I create responsive, user-friendly web applications using modern
+            technologies
+          </p>
+          <div class="cta-buttons">
+            <a href="about.html" class="cta-button"
+              >View My Work <i class="fas fa-arrow-right"></i
+            ></a>
+            <a href="contact.html" class="cta-button secondary"
+              >Hire Me <i class="fas fa-paper-plane"></i
+            ></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="skills">
+        <h3>Core Competencies</h3>
+        <div class="skills-grid">
+          <div class="skill-item">
+            <i class="fab fa-java"></i>
+            <p>Java</p>
+          </div>
+          <div class="skill-item">
+            <i class="fab fa-react"></i>
+            <p>React</p>
+          </div>
+          <div class="skill-item">
+            <i class="fas fa-database"></i>
+            <p>MySQL</p>
+          </div>
+          <div class="skill-item">
+            <i class="fab fa-js"></i>
+            <p>JavaScript</p>
+          </div>
+        </div>
       </section>
     </main>
+
+    <footer>
+      <p>© 2023 Rohit Ranvir. All rights reserved.</p>
+    </footer>
   </body>
 </html>

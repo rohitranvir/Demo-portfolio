@@ -3,29 +3,90 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Your Name - About</title>
+    <title>About | Rohit Ranvir</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
   </head>
   <body>
     <header>
-      <img src="images/profile.jpg" alt="Your Name" class="profile-img" />
-      <h1>Your Name</h1>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html" class="active">About</a>
-      </nav>
+      <div class="header-content">
+        <img src="images/my.jpg" alt="Rohit Ranvir" class="profile-img" />
+        <h1>Rohit Ranvir</h1>
+        <nav>
+          <a href="index.html"><i class="fas fa-home"></i> Home</a>
+          <a href="about.html" class="active"
+            ><i class="fas fa-user"></i> About</a
+          >
+          <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+        </nav>
+      </div>
     </header>
+
     <main>
-      <section class="about-section">
-        <h2>About Me</h2>
-        <p><strong>Age:</strong> 20</p>
-        <p><strong>Location:</strong> Yavatmal, India</p>
-        <p><strong>Education:</strong> B.E in Computer Science</p>
-        <p><strong>Skills:</strong> Java, HTML/CSS, JavaScript, MySQL</p>
-        <button onclick="window.location.href='index.html'" class="cta-button">
-          Back to Home
-        </button>
+      <section class="about-details">
+        <article class="bio">
+          <h2>My Journey</h2>
+          <p>
+            Currently pursuing my B.E in Computer Science at Babasaheb Naik
+            College of Engineering with a passion for building web solutions. My
+            internship at Zidio Development helped me gain practical experience
+            in full-stack development.
+          </p>
+        </article>
+
+        <div class="details-grid">
+          <div class="education">
+            <h3><i class="fas fa-graduation-cap"></i> Education</h3>
+            <ul>
+              <li><strong>B.E Computer Science</strong> - BNCOE (2021-2025)</li>
+              <li><strong>HSC</strong> - Atahar Mirza High School (79%)</li>
+              <li><strong>SSC</strong> - Atahar Mirza High School (69%)</li>
+            </ul>
+          </div>
+
+          <div class="experience">
+            <h3><i class="fas fa-briefcase"></i> Experience</h3>
+            <ul>
+              <li>
+                <strong>Intern</strong> - Zidio Development (2023-Present)
+              </li>
+              <li><strong>Freelance Projects</strong> - Website Development</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="certifications">
+          <h3><i class="fas fa-certificate"></i> Certifications</h3>
+          <div class="certs-grid">
+            <div class="cert-item">
+              <h4>Java Full Stack</h4>
+              <p>Great Learning Academy</p>
+              <a href="#" class="view-cert">View Certificate</a>
+            </div>
+            <div class="cert-item">
+              <h4>Java & C++</h4>
+              <p>Udemy Certification</p>
+              <a href="#" class="view-cert">View Certificate</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="action-buttons">
+          <a href="index.html" class="cta-button"
+            ><i class="fas fa-arrow-left"></i> Back to Home</a
+          >
+          <a href="contact.html" class="cta-button secondary"
+            >Contact Me <i class="fas fa-paper-plane"></i
+          ></a>
+        </div>
       </section>
     </main>
+
+    <footer>
+      <p>Connect with me: rohitranveer358@gmail.com | +91 9158000676</p>
+    </footer>
   </body>
 </html>
