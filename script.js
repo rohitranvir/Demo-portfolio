@@ -22,7 +22,7 @@ const portfolioData = {
         "Full-featured online store with product catalog, cart, and checkout system.",
       technologies: ["React", "Node.js", "MongoDB"],
       image: "images/project1.jpg",
-      link: "#",
+      link: "https://e-commerce-web-eight-eta.vercel.app/",
     },
     {
       title: "Task Management App",
@@ -38,7 +38,7 @@ const portfolioData = {
         "Responsive portfolio website showcasing creative work and skills.",
       technologies: ["HTML5", "CSS3", "JavaScript"],
       image: "images/project3.jpg",
-      link: "#",
+      link: "https://rohitranvirportfolio.vercel.app/",
     },
   ],
   testimonials: [
