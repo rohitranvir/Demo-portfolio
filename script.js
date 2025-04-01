@@ -2,9 +2,11 @@
 const portfolioData = {
   socialLinks: {
     github: "https://github.com/rohitranvir",
-    linkedin: "www.linkedin.com/in/rohit-ranveer",
+    linkedin: "https://www.linkedin.com/in/rohit-ranveer", // Added https://
     twitter: "https://www.facebook.com/share/16CB8f1FF4/",
   },
+  // ... rest of your data
+
   skills: [
     { name: "Java", icon: "fab fa-java", level: 90 },
     { name: "JavaScript", icon: "fab fa-js", level: 85 },
@@ -21,7 +23,7 @@ const portfolioData = {
       description:
         "Full-featured online store with product catalog, cart, and checkout system.",
       technologies: ["React", "Node.js", "MongoDB"],
-      image: "images/project1.jpg",
+      image: "images/project1.png",
       link: "https://e-commerce-web-eight-eta.vercel.app/",
     },
     {
@@ -29,7 +31,7 @@ const portfolioData = {
       description:
         "Productivity application for organizing tasks with drag-and-drop functionality.",
       technologies: ["JavaScript", "Firebase", "Material UI"],
-      image: "images/project2.jpg",
+      image: "images/project2.png",
       link: "#",
     },
     {
@@ -37,7 +39,7 @@ const portfolioData = {
       description:
         "Responsive portfolio website showcasing creative work and skills.",
       technologies: ["HTML5", "CSS3", "JavaScript"],
-      image: "images/project3.jpg",
+      image: "images/project3.png",
       link: "https://rohitranvirportfolio.vercel.app/",
     },
   ],
