@@ -57,7 +57,7 @@ const portfolioData = {
   ],
   timeline: [
     {
-      year: "2021-Present",
+      year: "2021-2025",
       title: "B.E in Computer Science",
       institution: "Babasaheb Naik College of Engineering",
       description:
@@ -65,7 +65,7 @@ const portfolioData = {
     },
     {
       year: "2023-Present",
-      title: "Full Stack Developer Intern",
+      title: "Mern Stack Developer Intern",
       institution: "Zidio Development",
       description:
         "Working on building web applications using React and Node.js.",
@@ -81,7 +81,7 @@ const portfolioData = {
   stats: {
     projectsCompleted: 12,
     happyClients: 8,
-    codingHours: 2500,
+    codingHours: 500,
   },
 };
 
