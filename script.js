@@ -2,10 +2,9 @@
 const portfolioData = {
   socialLinks: {
     github: "https://github.com/rohitranvir",
-    linkedin: "https://www.linkedin.com/in/rohit-ranveer", // Added https://
+    linkedin: "https://www.linkedin.com/in/rohit-ranveer",
     twitter: "https://www.facebook.com/share/16CB8f1FF4/",
   },
-  // ... rest of your data
 
   skills: [
     { name: "Java", icon: "fab fa-java", level: 90 },
@@ -227,7 +226,9 @@ function loadProjects() {
                       .map((tech) => `<span>${tech}</span>`)
                       .join("")}
                 </div>
-                <a href="${project.link}" class="project-link">View Project</a>
+                <a href="${
+                  project.link
+                }" class="project-link" target="_blank">View Project</a>
             </div>
         `;
     container.appendChild(projectElement);
@@ -337,7 +338,7 @@ function initializeFormValidation() {
   form.addEventListener("submit", function (e) {
     e.preventDefault();
     if (validateForm()) {
-      submitForm();
+      submitForm(form);
     }
   });
 
@@ -388,25 +389,40 @@ function initializeFormValidation() {
     return isValid;
   }
 
-  function submitForm() {
+  function submitForm(form) {
     const originalText = submitBtn.innerHTML;
     submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
     submitBtn.disabled = true;
     submitBtn.classList.add("sending");
 
-    // Simulate form submission
-    setTimeout(() => {
-      submitBtn.innerHTML = '<i class="fas fa-check"></i> Sent!';
-      submitBtn.classList.remove("sending");
-      submitBtn.classList.add("success");
+    // Using FormSubmit.co for form submission
+    const formData = new FormData(form);
 
-      setTimeout(() => {
-        // Uncomment this line for actual form submission
-        // form.submit();
+    fetch("https://formsubmit.co/ajax/rohitranveer358@gmail.com", {
+      method: "POST",
+      body: formData,
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.success) {
+          submitBtn.innerHTML = '<i class="fas fa-check"></i> Sent!';
+          submitBtn.classList.remove("sending");
+          submitBtn.classList.add("success");
 
-        // For demo, redirect to thank you page
-        window.location.href = "thank-you.html";
-      }, 1000);
-    }, 1500);
+          // Redirect to thank you page after 1 second
+          setTimeout(() => {
+            window.location.href = "thank-you.html";
+          }, 1000);
+        } else {
+          throw new Error("Form submission failed");
+        }
+      })
+      .catch((error) => {
+        submitBtn.innerHTML = originalText;
+        submitBtn.disabled = false;
+        submitBtn.classList.remove("sending");
+        alert("There was an error submitting the form. Please try again.");
+        console.error("Error:", error);
+      });
   }
 }
