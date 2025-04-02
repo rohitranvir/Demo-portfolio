@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services | Rohit Ranvir</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="header-content">
+        <img src="images/my.jpg" alt="Rohit Ranvir" class="profile-img" />
+        <h1>Rohit Ranvir</h1>
+        <nav>
+          <a href="index.html" class="active"
+            ><i class="fas fa-home"></i> Home</a
+          >
+          <a href="about.html"><i class="fas fa-user"></i> About</a>
+          <a href="services.html"><i class="fas fa-cogs"></i> Services</a>
+          <a href="blog.html"><i class="fas fa-blog"></i> Blog</a>
+          <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="section-padding">
+        <h2 class="section-heading">My Services</h2>
+        <p class="section-subtitle">
+          Professional solutions tailored to your business needs
+        </p>
+
+        <div class="services-grid" id="services-container">
+          <!-- Services loaded dynamically -->
+        </div>
+
+        <div class="pricing-table">
+          <h3 class="section-heading">Pricing Plans</h3>
+          <p class="section-subtitle">
+            Flexible options to fit your budget and requirements
+          </p>
+
+          <div class="pricing-grid" id="pricing-container">
+            <!-- Pricing loaded dynamically -->
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div class="back-to-top" id="backToTop">
+      <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <div class="theme-toggle" id="themeToggle">
+      <i class="fas fa-moon"></i>
+    </div>
+
+    <footer>
+      <div class="footer-social">
+        <a href="https://github.com/rohitranvir"
+          ><i class="fab fa-github"></i
+        ></a>
+        <a href="www.linkedin.com/in/rohit-ranveer"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+        <a href="https://www.facebook.com/share/16CB8f1FF4/"
+          ><i class="fab fa-facebook"></i
+        ></a>
+      </div>
+      <p>
+        © <span id="current-year"></span> Rohit Ranvir. All rights reserved.
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

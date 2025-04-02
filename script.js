@@ -16,6 +16,7 @@ const portfolioData = {
     { name: "MySQL", icon: "fas fa-database", level: 80 },
     { name: "Git", icon: "fab fa-git-alt", level: 85 },
   ],
+
   projects: [
     {
       title: "E-commerce Platform",
@@ -42,6 +43,7 @@ const portfolioData = {
       link: "https://rohitranvirportfolio.vercel.app/",
     },
   ],
+
   testimonials: [
     {
       name: "Rajesh Sharma",
@@ -56,6 +58,7 @@ const portfolioData = {
       image: "images/client2.jpg",
     },
   ],
+
   timeline: [
     {
       year: "2021-2025",
@@ -79,11 +82,122 @@ const portfolioData = {
         "Developed websites and web applications for various clients.",
     },
   ],
+
   stats: {
     projectsCompleted: 12,
     happyClients: 8,
     codingHours: 500,
   },
+
+  blogPosts: [
+    {
+      title: "Getting Started with React Hooks",
+      excerpt:
+        "Learn how to use React Hooks to simplify your functional components and manage state effectively.",
+      date: "May 15, 2023",
+      tags: ["React", "JavaScript", "Frontend"],
+      image: "images/blog1.jpg",
+      link: "#",
+    },
+    {
+      title: "Building RESTful APIs with Node.js",
+      excerpt:
+        "A comprehensive guide to creating scalable and maintainable REST APIs using Node.js and Express.",
+      date: "April 2, 2023",
+      tags: ["Node.js", "Backend", "API"],
+      image: "images/blog2.jpg",
+      link: "#",
+    },
+    {
+      title: "CSS Grid vs Flexbox",
+      excerpt:
+        "When to use CSS Grid and when to stick with Flexbox - a practical comparison with examples.",
+      date: "March 18, 2023",
+      tags: ["CSS", "Frontend", "Design"],
+      image: "images/blog3.jpg",
+      link: "#",
+    },
+  ],
+
+  services: [
+    {
+      title: "Web Development",
+      icon: "fas fa-code",
+      description: "Custom website development tailored to your business needs",
+      features: [
+        "Responsive Design",
+        "Performance Optimization",
+        "Cross-browser Compatibility",
+        "SEO Friendly",
+      ],
+    },
+    {
+      title: "UI/UX Design",
+      icon: "fas fa-paint-brush",
+      description:
+        "Beautiful and intuitive user interfaces that enhance user experience",
+      features: [
+        "Wireframing & Prototyping",
+        "User Research",
+        "Interaction Design",
+        "Usability Testing",
+      ],
+    },
+    {
+      title: "Mobile Development",
+      icon: "fas fa-mobile-alt",
+      description:
+        "Native and cross-platform mobile applications for iOS and Android",
+      features: [
+        "React Native Development",
+        "API Integration",
+        "App Store Optimization",
+        "Push Notifications",
+      ],
+    },
+  ],
+
+  pricing: [
+    {
+      title: "Basic",
+      price: 299,
+      period: "month",
+      features: [
+        "Up to 5 pages",
+        "Basic SEO",
+        "Mobile Responsive",
+        "1 Revision",
+        "Contact Form",
+      ],
+      featured: false,
+    },
+    {
+      title: "Standard",
+      price: 599,
+      period: "month",
+      features: [
+        "Up to 10 pages",
+        "Advanced SEO",
+        "CMS Integration",
+        "3 Revisions",
+        "Basic Analytics",
+      ],
+      featured: true,
+    },
+    {
+      title: "Premium",
+      price: 999,
+      period: "month",
+      features: [
+        "Unlimited pages",
+        "E-commerce Functionality",
+        "Custom Design",
+        "Unlimited Revisions",
+        "Advanced Analytics",
+      ],
+      featured: false,
+    },
+  ],
 };
 
 // Initialize Portfolio
@@ -127,6 +241,27 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (document.querySelector(".stats-grid")) {
     animateStatistics();
+  }
+
+  // New Initializations
+  if (document.getElementById("blog-container")) {
+    loadBlogPosts();
+  }
+
+  if (document.getElementById("services-container")) {
+    loadServices();
+  }
+
+  if (document.getElementById("pricing-container")) {
+    loadPricing();
+  }
+
+  if (document.getElementById("backToTop")) {
+    initBackToTop();
+  }
+
+  if (document.getElementById("themeToggle")) {
+    initThemeToggle();
   }
 });
 
@@ -201,9 +336,9 @@ function loadSkills() {
       portfolioData.skills.indexOf(skill) * 0.1
     }s`;
     skillElement.innerHTML = `
-            <i class="${skill.icon}"></i>
-            <p>${skill.name}</p>
-        `;
+      <i class="${skill.icon}"></i>
+      <p>${skill.name}</p>
+    `;
     container.appendChild(skillElement);
   });
 }
@@ -217,20 +352,18 @@ function loadProjects() {
       portfolioData.projects.indexOf(project) * 0.1
     }s`;
     projectElement.innerHTML = `
-            <img src="${project.image}" alt="${project.title}">
-            <div class="project-card-content">
-                <h3>${project.title}</h3>
-                <p>${project.description}</p>
-                <div class="project-tech">
-                    ${project.technologies
-                      .map((tech) => `<span>${tech}</span>`)
-                      .join("")}
-                </div>
-                <a href="${
-                  project.link
-                }" class="project-link" target="_blank">View Project</a>
-            </div>
-        `;
+      <img src="${project.image}" alt="${project.title}">
+      <div class="project-card-content">
+        <h3>${project.title}</h3>
+        <p>${project.description}</p>
+        <div class="project-tech">
+          ${project.technologies.map((tech) => `<span>${tech}</span>`).join("")}
+        </div>
+        <a href="${
+          project.link
+        }" class="project-link" target="_blank">View Project</a>
+      </div>
+    `;
     container.appendChild(projectElement);
   });
 }
@@ -241,10 +374,10 @@ function loadTestimonials() {
     const testimonialElement = document.createElement("div");
     testimonialElement.className = "testimonial";
     testimonialElement.innerHTML = `
-            <img src="${testimonial.image}" alt="${testimonial.name}" class="client-img">
-            <p class="testimonial-text">"${testimonial.text}"</p>
-            <p class="client-name">- ${testimonial.name}, ${testimonial.role}</p>
-        `;
+      <img src="${testimonial.image}" alt="${testimonial.name}" class="client-img">
+      <p class="testimonial-text">"${testimonial.text}"</p>
+      <p class="client-name">- ${testimonial.name}, ${testimonial.role}</p>
+    `;
     container.appendChild(testimonialElement);
   });
 }
@@ -284,13 +417,13 @@ function loadTimeline() {
       portfolioData.timeline.indexOf(item) * 0.2
     }s`;
     timelineItem.innerHTML = `
-            <div class="timeline-year">${item.year}</div>
-            <div class="timeline-content">
-                <h4>${item.title}</h4>
-                <p class="timeline-institution">${item.institution}</p>
-                <p>${item.description}</p>
-            </div>
-        `;
+      <div class="timeline-year">${item.year}</div>
+      <div class="timeline-content">
+        <h4>${item.title}</h4>
+        <p class="timeline-institution">${item.institution}</p>
+        <p>${item.description}</p>
+      </div>
+    `;
     container.appendChild(timelineItem);
   });
 }
@@ -304,14 +437,14 @@ function loadSkillBars() {
       portfolioData.skills.indexOf(skill) * 0.1
     }s`;
     skillBar.innerHTML = `
-            <div class="skill-info">
-                <span class="skill-name">${skill.name}</span>
-                <span class="skill-percent">${skill.level}%</span>
-            </div>
-            <div class="progress-bar">
-                <div class="progress" style="width: ${skill.level}%"></div>
-            </div>
-        `;
+      <div class="skill-info">
+        <span class="skill-name">${skill.name}</span>
+        <span class="skill-percent">${skill.level}%</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress" style="width: ${skill.level}%"></div>
+      </div>
+    `;
     container.appendChild(skillBar);
   });
 }
@@ -425,4 +558,122 @@ function initializeFormValidation() {
         console.error("Error:", error);
       });
   }
+}
+
+// Blog Page Functions
+function loadBlogPosts() {
+  const container = document.getElementById("blog-container");
+  portfolioData.blogPosts.forEach((post) => {
+    const postElement = document.createElement("div");
+    postElement.className = "blog-card slide-up";
+    postElement.style.animationDelay = `${
+      portfolioData.blogPosts.indexOf(post) * 0.1
+    }s`;
+    postElement.innerHTML = `
+      <img src="${post.image}" alt="${post.title}">
+      <div class="blog-content">
+        <span class="blog-date">${post.date}</span>
+        <h3>${post.title}</h3>
+        <p>${post.excerpt}</p>
+        <div class="blog-tags">
+          ${post.tags
+            .map((tag) => `<span class="blog-tag">${tag}</span>`)
+            .join("")}
+        </div>
+        <a href="${
+          post.link
+        }" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+      </div>
+    `;
+    container.appendChild(postElement);
+  });
+}
+
+// Services Page Functions
+function loadServices() {
+  const container = document.getElementById("services-container");
+  portfolioData.services.forEach((service) => {
+    const serviceElement = document.createElement("div");
+    serviceElement.className = "service-card fade-in";
+    serviceElement.style.animationDelay = `${
+      portfolioData.services.indexOf(service) * 0.1
+    }s`;
+    serviceElement.innerHTML = `
+      <div class="service-icon">
+        <i class="${service.icon}"></i>
+      </div>
+      <h3>${service.title}</h3>
+      <p>${service.description}</p>
+      <ul>
+        ${service.features.map((feature) => `<li>${feature}</li>`).join("")}
+      </ul>
+    `;
+    container.appendChild(serviceElement);
+  });
+}
+
+function loadPricing() {
+  const container = document.getElementById("pricing-container");
+  portfolioData.pricing.forEach((plan) => {
+    const planElement = document.createElement("div");
+    planElement.className = `pricing-card ${
+      plan.featured ? "featured" : ""
+    } slide-up`;
+    planElement.style.animationDelay = `${
+      portfolioData.pricing.indexOf(plan) * 0.1
+    }s`;
+    planElement.innerHTML = `
+      <h3>${plan.title}</h3>
+      <div class="price">$${plan.price}<span>/${plan.period}</span></div>
+      <ul>
+        ${plan.features.map((feature) => `<li>${feature}</li>`).join("")}
+      </ul>
+      <a href="contact.html" class="cta-button">Get Started</a>
+    `;
+    container.appendChild(planElement);
+  });
+}
+
+// Utility Functions
+function initBackToTop() {
+  const backToTopBtn = document.getElementById("backToTop");
+
+  window.addEventListener("scroll", () => {
+    if (window.pageYOffset > 300) {
+      backToTopBtn.classList.add("visible");
+    } else {
+      backToTopBtn.classList.remove("visible");
+    }
+  });
+
+  backToTopBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+}
+
+function initThemeToggle() {
+  const themeToggle = document.getElementById("themeToggle");
+  const icon = themeToggle.querySelector("i");
+
+  // Check for saved theme preference
+  const currentTheme = localStorage.getItem("theme");
+  if (currentTheme === "dark") {
+    document.body.classList.add("dark-mode");
+    icon.classList.replace("fa-moon", "fa-sun");
+  }
+
+  themeToggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+
+    if (document.body.classList.contains("dark-mode")) {
+      icon.classList.replace("fa-moon", "fa-sun");
+      localStorage.setItem("theme", "dark");
+    } else {
+      icon.classList.replace("fa-sun", "fa-moon");
+      localStorage.setItem("theme", "light");
+    }
+  });
 }
